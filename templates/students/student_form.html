@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="tables">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col-12">
+        <div class="card card-border px-4 py-4 shadow">
+          <a href="{% url 'students:list' %}" class="font-size-14">
+            <i class="fa fa-angle-left mr-2"></i>
+            <span>Back to student listing</span>
+          </a>
+
+          <h2 class="mt-5 mb-4">{{ title }}</h2>
+
+          <form method="POST" class="stDetails" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="row">
+              <div class="col-md-6 mt-4">
+                <label for="id_first_name">First Name <span class="text-danger">*</span></label>
+                {{ form.first_name }}
+                <small class="text-danger">{{ form.errors.first_name.0 }}</small>
+              </div>
+
+              <div class="col-md-6 mt-4">
+                <label for="id_last_name">Last Name <span class="text-danger">*</span></label>
+                {{ form.last_name }}
+                <small class="text-danger">{{ form.errors.last_name.0 }}</small>
+              </div>
+
+              <div class="col-md-6 mt-4">
+                <label for="id_phone_number">Phone <span class="text-danger">*</span></label>
+                {{ form.phone_number }}
+                <small class="text-danger">{{ form.errors.phone_number.0 }}</small>
+              </div>
+
+              <div class="col-md-6 mt-4">
+                <label for="id_email">Email <span class="text-danger">*</span></label>
+                {{ form.email }}
+                <small class="text-danger">{{ form.errors.email.0 }}</small>
+              </div>
+
+              <div class="col-md-12 mt-4">
+                <label for="id_ssn">Social Security Number <span class="text-danger">*</span></label>
+                {{ form.ssn }}
+                <small class="text-danger">{{ form.errors.ssn.0 }}</small>
+              </div>
+
+              <div class="col-md-6 mt-4">
+                <label for="id_phone_number">Start Date <span class="text-danger">*</span></label>
+                {{ form.start_date }}
+                <small class="text-danger">{{ form.errors.start_date.0 }}</small>
+              </div>
+
+              <div class="col-md-6 mt-4">
+                <label for="id_email">Graduation Date</label>
+                {{ form.graduation_date }}
+                <small class="text-danger">{{ form.errors.graduation_date.0 }}</small>
+              </div>
+
+              <div class="col-md-12 mt-4">
+                <label for="id_address">Address <span class="text-danger">*</span></label>
+                {{ form.address }}
+                <small class="text-danger">{{ form.errors.address.0 }}</small>
+              </div>
+
+              <div class="col-md-6 mt-4">
+                <label for="id_driver_license_number">Driver License Number <span class="text-danger">*</span></label>
+                {{ form.driver_license_number }}
+                <small class="text-danger">{{ form.errors.driver_license_number.0 }}</small>
+              </div>
+
+              <div class="col-md-6 mt-4">
+                <label for="id_driver_license_class">Driver License Class <span class="text-danger">*</span></label>
+                {{ form.driver_license_class }}
+                <small class="text-danger">{{ form.errors.driver_license_class.0 }}</small>
+              </div>
+
+              <div class="col-md-6 mt-4">
+                <label for="id_state_issued">State issued <span class="text-danger">*</span></label>
+                {{ form.state_issued }}
+                <small class="text-danger">{{ form.errors.state_issued.0 }}</small>
+              </div>
+
+              <div class="col-md-6 mt-4">
+                <label for="id_date_of_birth">Date of Birth <span class="text-danger">*</span></label>
+                {{ form.date_of_birth }}
+                <small class="text-danger">{{ form.errors.date_of_birth.0 }}</small>
+              </div>
+
+              <div class="col-12 mt-5">
+                <hr class="mb-5">
+                <h4>Files</h4>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-6 p-2">
+                <h5>Transcript</h5>
+                {{ form.transcript_file }}
+                <label for="id_transcript_file" class="text-center">
+                  <img src="{% static 'img/img-placeholder.png' %}" class="img-fluid" alt="">
+                  <p class="fs-14 mb-0" id="filename1">
+                    Drag a Photo or <br>
+                    <span class="text-primary">Browse</span>
+                  </p>
+                </label>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-6 p-2">
+                <h5>ID</h5>
+                {{ form.id_file }}
+                <label for="id_id_file" class="text-center">
+                  <img src="{% static 'img/img-placeholder.png' %}" class="img-fluid" alt="">
+                  <p class="fs-14 mb-0" id="filename2">
+                    Drag a Photo or <br>
+                    <span class="text-primary">Browse</span>
+                  </p>
+                </label>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-6 p-2">
+                <h5>Application</h5>
+                {{ form.application_file }}
+                <label for="id_application_file" class="text-center">
+                  <img src="{% static 'img/img-placeholder.png' %}" class="img-fluid" alt="">
+                  <p class="fs-14 mb-0" id="filename3">
+                    Drag a Photo or <br>
+                    <span class="text-primary">Browse</span>
+                  </p>
+                </label>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-6 p-2">
+                <h5>Driver License</h5>
+                {{ form.driver_license_file }}
+                <label for="id_driver_license_file" class="text-center">
+                  <img src="{% static 'img/img-placeholder.png' %}" class="img-fluid" alt="">
+                  <p class="fs-14 mb-0" id="filename4">
+                    Drag a Photo or <br>
+                    <span class="text-primary">Browse</span>
+                  </p>
+                </label>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-6 p-2">
+                <h5>Medical Card</h5>
+                {{ form.medical_card_file }}
+                <label for="id_medical_card_file" class="text-center">
+                  <img src="{% static 'img/img-placeholder.png' %}" class="img-fluid" alt="">
+                  <p class="fs-14 mb-0" id="filename5">
+                    Drag a Photo or <br>
+                    <span class="text-primary">Browse</span>
+                  </p>
+                </label>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-6 p-2">
+                <h5>Birth Certificate</h5>
+                {{ form.birth_certificate_file }}
+                <label for="id_birth_certificate_file" class="text-center">
+                  <img src="{% static 'img/img-placeholder.png' %}" class="img-fluid" alt="">
+                  <p class="fs-14 mb-0" id="filename6">
+                    Drag a Photo or <br>
+                    <span class="text-primary">Browse</span>
+                  </p>
+                </label>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-6 p-2">
+                <h5>Drug Screening</h5>
+                {{ form.drug_screening_file }}
+                <label for="id_drug_screening_file" class="text-center">
+                  <img src="{% static 'img/img-placeholder.png' %}" class="img-fluid" alt="">
+                  <p class="fs-14 mb-0" id="filename7">
+                    Drag a Photo or <br>
+                    <span class="text-primary">Browse</span>
+                  </p>
+                </label>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-6 p-2">
+                <h5>Miscellaneous</h5>
+                {{ form.miscellaneous_file }}
+                <label for="id_miscellaneous_file" class="text-center">
+                  <img src="{% static 'img/img-placeholder.png' %}" class="img-fluid" alt="">
+                  <p class="fs-14 mb-0" id="filename8">
+                    Drag a Photo or <br>
+                    <span class="text-primary">Browse</span>
+                  </p>
+                </label>
+              </div>
+
+              <div class="col-md-12 mt-4">
+                <button type="submit" class="btn btn-dark btn-block br-0 border-0 py-3 btn-gredient text-white">
+                  Save
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

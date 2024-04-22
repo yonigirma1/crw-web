@@ -1,0 +1,202 @@
+{% autoescape off %}
+
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <style>
+    label {
+      font-weight: 700;
+    }
+
+    .container {
+      font-size: 16px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 p-2 m-auto">
+        <h1>Application to Pre-Qualify</h1>
+
+        <div class="inp">
+          <h2>Personal Information</h2>
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_date">Date:</label>
+          {{ date }}
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_first_name">First Name:</label>
+          {{ first_name }}
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_last_name">Last Name:</label>
+          {{ last_name }}
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_phone_number">Phone Number:</label>
+          {{ phone_number }}
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_date_of_birth">Date of Birth:</label>
+          {{ date_of_birth }}
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_age">Age:</label>
+          {{ age }}
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+      <div class="col-md-5 m-auto position-relative zi-2"></div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Address Information</h2>
+        <div class="row">
+          <div class="col-md-6 p-2">
+            <label for="id_email">Email Address:</label>
+            {{ email }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_street_address">Street Address:</label>
+            {{ street_address }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_address_1">Address line 1:</label>
+            {{ address_1 }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_address_2">Address line 2:</label>
+            {{ address_2 }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_city">City:</label>
+            {{ city }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_state">State:</label>
+            {{ state }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_postal_code">Postal code:</label>
+            {{ postal_code }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_country">Country:</label>
+            {{ country }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_ssn">Special Security Number:</label>
+            {{ ssn }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h2>Driver Information</h2>
+
+        <div class="row">
+          <div class="col-md-6 p-2">
+            <div class="row">
+              <div class="col-md-4">
+                <label class="d-block">High School Diploma:</label>
+                {{ high_school_diploma }}
+              </div>
+
+              <div class="col-md-4">
+                <label class="d-block">Valid Driver's License:</label>
+                {{ high_school_diploma }}
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_driver_license_class" class="d-block">Driver License Class:</label>
+            {{ driver_license_class }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_driver_license_number" class="d-block">Driver License Number:</label>
+            {{ driver_license_number }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_state_issued" class="d-block">State Issued:</label>
+            {{ state_issued }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Do you have any outstanding tickets?</label>
+            {{ tickets }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Do you have any moving violation in the last three years?</label>
+            {{ violation }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Have you been charged with DUI- DWI in the last five years?</label>
+            {{ dui_dwi }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Have you ever been convicted of a felony?</label>
+            {{ felony }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Can you pass a drug test?</label>
+            {{ drug }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">*Do you have any health problems?</label>
+            {{ health }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Have you ever attended a driving school?</label>
+            {{ driving }}
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Are you currently employed?</label>
+            {{ employed }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script
+</body>
+{% endautoescape %}

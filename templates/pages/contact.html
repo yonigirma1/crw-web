@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="hero bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 m-auto">
+        <h1 class="text-white text-uppercase">
+          Contact Us
+        </h1>
+      </div>
+
+      <div class="col-md-6 m-auto">
+        <div class="text-center">
+          <img src="{% static 'img/truck.png' %}" class="img-fluid truck" style="opacity: 0;" alt="">
+          <img src="{% static 'img/bg-shape.png' %}" class="img-fluid position-absolute shapeBg topShape" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact position-relative zi-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 p-2 m-auto">
+        <div class="card br-0 border-o bg-white">
+          <div class="card-body">
+            <form method="POST">
+              {% csrf_token %}
+
+              <div class="inp py-2">
+                <input type="text" class="form-control br-0 dark" placeholder="Your Full Name" name="name" required>
+              </div>
+
+              <div class="inp py-2">
+                <input type="email" class="form-control br-0 dark" placeholder="Email" name="email" required>
+              </div>
+
+              <div class="inp py-2">
+                <textarea name="address" class="form-control br-0 dark" cols="30" rows="6" placeholder="Your Address"
+                          required></textarea>
+              </div>
+
+              <button class="btn btn-dark br-0 border-0 btn-gredient text-white text-uppercase mt-3">Submit Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+
+      <div class="col-md-4 position-relative zi-2">
+        <h3 class="text-white">CRW Truck Driving Training School</h3>
+
+        <table class="table my-5">
+          <tr>
+            <td class="va-middle border-0">
+              <img src="{% static 'img/env.png' %}" class="img-fluid" alt="">
+            </td>
+
+            <td class="va-middle border-0">
+              <p class="text-white text-left mb-0">
+                <a href="mailto:bmaddoxcrwtraining@gmail.com" class="text-white">
+                  bmaddoxcrwtraining@gmail.com
+                </a>
+
+                <br>
+
+                <a href="mailto:khuntercrwtraining@gmail.com" class="text-white">khuntercrwtraining@gmail.com</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table class="table my-5">
+          <tr>
+            <td class="va-middle border-0">
+              <img src="{% static 'img/map.png' %}" class="img-fluid" alt="">
+            </td>
+
+            <td class="va-middle border-0">
+              <p class="text-white text-left mb-0">
+                1850 South West St.
+                <br>
+                Jackson, MS 39201
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table class="table my-5">
+          <tr>
+            <td class="va-middle border-0">
+              <img src="{% static 'img/call.png' %}" class="img-fluid" alt="">
+            </td>
+
+            <td class="va-middle border-0">
+              <p class="text-white text-left mb-0">
+                <a href="tel:Fax: 601-968-8023" class="text-white">
+                  Tel: 601-968-8023 <br>
+                </a>
+
+                <a href="" class="text-white">
+                  Fax: 601-968-8024 <br>
+                </a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

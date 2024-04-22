@@ -1,0 +1,98 @@
+<div class="{{ banner }}">
+  <section class="logobar {{ background }} pt-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-7">
+          <a href="{% url 'pages:home' %}" class="text-white text-decoration-none">
+            <h3 class="teko text-white">CRW Truck Driver Training School</h3>
+          </a>
+        </div>
+
+        <div class="col-md-5 text-right">
+          <h5 class="teko text-white">
+            CALL NOW |
+            <a class="teko text-white text-decoration-none" href="tel:601-968-8023">TEL: 601-968-8023</a>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="navbarSection {{ background }}">
+    <div class="container-fluid">
+      <nav class="py-0 pl-0 navbar navbar-expand-lg navbar-light bg-transparent">
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <i class="fa fa-bars text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item teko text-white pr-3">
+              <a href="{% url 'pages:home' %}" class="text-white teko text-decoration-none">HOME</a>
+            </li>
+
+            <li class="nav-item teko text-white pr-3">
+              <a href="{% url 'pages:about' %}" class="text-white teko text-decoration-none">ABOUT</a>
+            </li>
+
+            <li class="nav-item teko text-white pr-3">
+              <a href="{% url 'pages:admission' %}" class="text-white teko text-decoration-none">ADMISSION</a>
+            </li>
+
+            <li class="nav-item teko text-white pr-3">
+              <a href="{% url 'pages:apply_online' %}" class="text-white teko text-decoration-none">APPLY ONLINE</a>
+            </li>
+
+            <li class="nav-item teko text-white pr-3">
+              <a href="{% url 'pages:contact' %}" class="text-white teko text-decoration-none">CONTACT</a>
+            </li>
+
+            {% if not user.is_authenticated %}
+            <li class="nav-item teko text-white">
+              <a href="{% url 'users:login' %}" class="text-white teko text-decoration-none">LOGIN</a>
+            </li>
+
+            {% else %}
+            <li class="nav-item teko text-white pr-3">
+              <a href="{% url 'students:list' %}" class="text-white teko text-decoration-none">STUDENTS</a>
+            </li>
+
+            <li class="nav-item dropdown pr-3">
+              <a class="nav-link dropdown-toggle teko text-white" href="#" id="navbarDropdown" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {% if user.first_name %}
+                {{ user.first_name|upper}}
+                {% else %}
+                {{ user.email|upper}}
+                {% endif %}
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'users:edit_profile' %}">Update Profile</a>
+                <a class="dropdown-item" href="{% url 'users:password_change' %}">Change Password</a>
+              </div>
+            </li>
+
+            <li class="nav-item teko text-white">
+              <a id="logout" href="javascript:void(0)" class="text-white teko text-decoration-none">LOGOUT</a>
+            </li>
+            {% endif %}
+          </ul>
+          <br>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  {% if container %}
+  <section class="title">
+    <div class="container">
+      {% if text %}
+      <h1 class="text-white text-uppercase">{{ text }}</h1>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+</div>

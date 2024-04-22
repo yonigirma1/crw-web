@@ -1,0 +1,722 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.teko {
+  font-family: "Teko", sans-serif;
+}
+
+.navbar-brand.teko {
+  font-size: 30px;
+}
+
+.navbarSection.bg-dark {
+  padding-bottom: 20px;
+}
+
+.bg-dark {
+  background-color: black !important;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+  background-color: #fcfcfc;
+}
+
+/* hero */
+h1 {
+  font-size: 48px;
+}
+
+.hero {
+  padding: 60px 0;
+}
+
+.br-0 {
+  border-radius: 0 !important;
+}
+
+.btn-gredient {
+  background: linear-gradient(90deg, #4b2869, #7b2f2d, #8b5221);
+  padding: 8px 30px;
+}
+
+.truck {
+  position: relative;
+  z-index: 2;
+}
+
+.img-fluid.position-absolute.shapeBg {
+  right: -105px;
+  top: 205px;
+  z-index: 1;
+  width: 169%;
+  max-width: 125%;
+}
+
+.military {
+  padding: 100px 0;
+}
+
+.military h2 {
+  font-size: 72px;
+  background: linear-gradient(90deg, #fb8b3a, #8f4ead);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+}
+
+.img-fluid.bbb {
+  width: 100px;
+  margin-top: 30px;
+}
+
+.zi-2 {
+  z-index: 2;
+}
+
+.worth {
+  background-image: url("../img/worthbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-top: 500px;
+  padding-bottom: 200px;
+}
+
+.worth h2 {
+  font-size: 48px;
+}
+
+.img-fluid.smTruck {
+  width: 200px;
+}
+
+.howBig {
+  position: relative;
+  top: -180px;
+  z-index: 2;
+  margin-bottom: -180px;
+}
+
+.howBig h2 {
+  font-size: 48px;
+}
+
+.howBig .line {
+  margin-top: 150px;
+  background: linear-gradient(90deg, #fe9738, #df544d, #8546c2);
+  height: 15px;
+}
+
+.comeVisit {
+  padding: 100px 0;
+  background-image: url("../img/comeBg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: -7.5px;
+  margin-bottom: -7.5px;
+  padding-bottom: 400px;
+  margin-bottom: -300px;
+}
+
+.comeVisit .col-md-10 img {
+  height: 25px !important;
+}
+
+.comeVisit h2 {
+  font-size: 48px;
+}
+
+.btn-dark {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.btn:focus {
+  outline: unset !important;
+  box-shadow: unset !important;
+}
+
+.form-control:focus {
+  outline: unset !important;
+  box-shadow: unset !important;
+}
+
+.footer {
+  background-image: url("../img/footerBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-top: 445px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 2;
+  top: -150px;
+  margin-bottom: -150px;
+}
+
+.footer .form-control.br-0.mb-2.bg-transparent {
+  width: 90%;
+}
+
+.aboutBanner {
+  background-image: url("../img/aboutBg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  margin-bottom: -320px;
+}
+
+.title {
+  padding: 150px 0;
+}
+
+.crw {
+  background-image: url("../img/crwBg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 400px 0 450px 0;
+}
+
+.school {
+  padding: 100px 0;
+}
+
+.school h2 {
+  font-size: 72px;
+  background: linear-gradient(90deg, #fb8b3a, #8f4ead);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+}
+
+.liscence {
+  background-image: url("../img/liscenceBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+.quotes {
+  padding: 100px 0;
+}
+
+.comeVisit .line {
+  margin-top: -105px;
+  background: linear-gradient(90deg, #fe9738, #df544d, #8546c2);
+  height: 15px;
+  margin-bottom: 100px;
+}
+
+.admissionBanner {
+  background-image: url("../img/admissionBg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+  padding-bottom: 194px;
+}
+
+.tabsection {
+  padding: 100px 0;
+}
+
+.px-0.btn.btn-block.text-left.text-uppercase.active {
+  background: linear-gradient(90deg, #fb8b3a, #8f4ead);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admission h2 {
+  font-size: 72px;
+  background: linear-gradient(90deg, #fb8b3a, #8f4ead);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+}
+
+.studentBanner {
+  background-image: url("../img/studentBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.tables {
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 10;
+}
+
+.pagination {
+  position: relative;
+  z-index: 10;
+  margin-left: auto !important;
+  display: inline;
+}
+
+.form-control.br-0.dark::placeholder {
+  color: #a3a3a3 !important;
+}
+
+textarea {
+  resize: unset;
+}
+
+form .btn.btn-dark.br-0.border-0.btn-gredient.text-white {
+  background: linear-gradient(90deg, #8646c1, #fd9439);
+}
+
+.contact .card-body {
+  padding: 40px;
+}
+
+.va-middle {
+  vertical-align: middle !important;
+}
+
+.contact.position-relative.zi-2 {
+  padding-bottom: 0;
+  top: -190px;
+}
+
+.img-fluid.position-absolute.shapeBg.topShape {
+  top: 90px;
+}
+
+.military h3 {
+  background: linear-gradient(90deg, #fb8b3a, #8f4ead);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.img-fluid.position-absolute.shapeBg.applyShape {
+  top: 0;
+}
+
+.militaryy {
+  padding: 50px 0;
+}
+
+.inp.my-2 {
+  margin: 20px 0 !important;
+}
+
+.secondStep {
+  background: #fcfcfc;
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+  top: -60px;
+  margin-bottom: -120px;
+}
+
+.apply .line {
+  margin-top: -40px;
+  z-index: 2;
+  position: relative;
+}
+
+.stDetails input::placeholder {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+label .img-fluid {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.files {
+  display: none;
+}
+
+form .col-md-4.p-2 {
+  text-align: center;
+  padding: 30px 10px !important;
+  margin: auto !important;
+}
+
+label.text-center {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  width: 100%;
+  height: 150px;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-toggler {
+    padding: 0;
+  }
+
+  .worth {
+    background-image: url("../img/worthbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+
+  .comeVisit .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: auto !important;
+    text-align: center !important;
+  }
+
+  .comeVisit .text-left {
+    text-align: center !important;
+    margin-top: 20px;
+  }
+
+  .footer .col-md-4.p-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 20px;
+  }
+
+  .footer .col-md-2.p-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: right !important;
+    margin-top: 20px;
+  }
+
+  .footer .col-md-3.p-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 20px;
+  }
+
+  .footer {
+    background-image: url("../img/footerBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding-top: 481px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    top: -350px;
+    margin-bottom: -350px;
+  }
+
+  .footer .col-md-3.p-2:last-child {
+    text-align: right;
+  }
+
+  .military .col-md-2 {
+    display: none;
+  }
+
+  .aboutBanner {
+    background-image: url("../img/aboutBg.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    margin-bottom: -65px;
+  }
+
+  .title {
+    padding: 50px 0;
+  }
+
+  .crw {
+    background-image: url("../img/crwBg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    padding: 20px 0;
+    background: linear-gradient(#fbab75, #8b47bd);
+  }
+
+  .school {
+    padding: 20px 0;
+  }
+
+  .liscence {
+    background-image: url("../img/liscenceBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+  }
+
+  .quotes {
+    padding: 20px 0;
+  }
+
+  .quotes .img-fluid.mt-3 {
+    display: block;
+    width: 35%;
+    margin-top: 30px !important;
+  }
+
+  .comeVisit .line {
+    margin-top: -108px;
+    background: linear-gradient(90deg, #fe9738, #df544d, #8546c2);
+    height: 15px;
+    margin-bottom: 35px;
+  }
+
+  .col-md-6.p-2 .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .img-fluid.position-absolute.shapeBg.applyShape {
+    top: 112px;
+  }
+  .militaryy .col-md-2 {
+    display: none;
+  }
+
+  .secondStep {
+    background: #fcfcfc;
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+    top: -60px;
+    margin-bottom: -53px;
+  }
+
+  .contact.position-relative.zi-2 .col-md-1 {
+    display: none;
+  }
+
+  .contact .col-md-7.p-2.m-auto {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .contact .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    background-color: #fa8839;
+    padding: 15px;
+  }
+
+  .img-fluid.position-absolute.shapeBg.topShape {
+    display: none;
+  }
+
+  .contact.position-relative.zi-2 {
+    padding-bottom: 0;
+    top: 45px;
+  }
+
+  .contact .card-body {
+    padding: 15px;
+  }
+
+  .col-md-7.p-2.m-auto {
+    margin: unset !important;
+  }
+
+  .img-fluid.truck {
+    opacity: 1 !important;
+  }
+
+  .studentBanner {
+    background-color: #9f50ab;
+    margin-bottom: 20px;
+  }
+
+  .tables {
+    position: relative;
+    z-index: 2;
+  }
+
+  .stTitle {
+    padding-bottom: 20px;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logobar .col-md-7 {
+    text-align: center;
+  }
+
+  .navbar-toggler {
+    position: relative;
+    top: -30px;
+  }
+
+  .img-fluid.position-absolute.shapeBg {
+    display: none;
+  }
+
+  .military .text-white {
+    color: black !important;
+  }
+
+  .container {
+    padding: 0 25px !important;
+  }
+
+  .col-md-5.m-auto.position-relative.zi-2 {
+    padding: 10px;
+  }
+
+  .img-fluid.bbb {
+    background: red;
+    border-radius: 8px;
+  }
+
+  .worth.position-relative.zi-2 {
+    background-color: #ec8c69;
+    padding-top: 50px;
+  }
+
+  .howBig .line {
+    margin-top: 0;
+    background: linear-gradient(90deg, #fe9738, #df544d, #8546c2);
+    height: 15px;
+  }
+
+  .howBig h2 {
+    font-size: 40px;
+  }
+
+  .img-fluid.truck {
+    margin-top: 30px;
+  }
+
+  .comeVisit h2 {
+    font-size: 40px;
+  }
+
+  .footer h3.text-white.text-uppercase {
+    font-size: 18px;
+  }
+
+  h1.text-white.text-uppercase {
+    font-size: 30px;
+  }
+
+  .military {
+    padding: 20px 0;
+  }
+
+  .crw h2 {
+    font-size: 25px;
+  }
+
+  .tabsection {
+    padding-top: 0;
+  }
+
+  .militaryy .col-md-5.m-auto.position-relative.zi-2 {
+    display: none;
+  }
+
+  .col-md-6.p-2 .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 9px 0;
+  }
+
+  .contact .col-md-7.p-2.m-auto {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .contact .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-color: #fa8839;
+    padding: 15px;
+  }
+
+  .table.my-5 {
+    margin: 20px !important;
+  }
+
+  .contact.position-relative.zi-2 {
+    padding-bottom: 0;
+    top: 45px;
+    margin-bottom: -45px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .tables table td:nth-child(6) {
+    display: none;
+  }
+
+  .tables table td:nth-child(7) {
+    display: none;
+  }
+
+  .tables table td:nth-child(4) {
+    display: none;
+  }
+}
+
+.card-border {
+  border-top-color: #b026c2;
+  border-top-width: 4px;
+}
+
+.nav-link {
+  padding: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.dropdown-menu {
+  padding: 0.25rem !important;
+}
+
+.dropdown-item {
+  padding: 0.5rem !important;
+  font-size: 14px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.table-responsive::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.table-responsive::-webkit-scrollbar:vertical {
+  width: 12px;
+}
+
+.table-responsive::-webkit-scrollbar:horizontal {
+  height: 12px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ffffff;
+}

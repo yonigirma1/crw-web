@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="hero bg-dark">
+  <form method="POST" id="id_form">
+    {% csrf_token %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 m-auto">
+          <h1 class="text-white text-uppercase">Apply online</h1>
+        </div>
+
+        <div class="col-md-6 m-auto">
+          <div class="text-center">
+            <img src="{% static 'img/apply-truck.png' %}" class="img-fluid truck" alt="">
+            <img src="{% static 'img/applyShape.png' %}" class="img-fluid position-absolute shapeBg applyShape" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="militaryy">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 p-2 m-auto">
+        <h3>Application to Pre-Qualify</h3>
+
+        <div class="inp">
+          <h5>Personal Information</h5>
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_date">Date</label>
+          <input form="id_form" required type="date" class="form-control br-0 dark" name="date" id="id_date">
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_first_name">First Name</label>
+          <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="Enter First Name"
+                 name="first_name" id="id_first_name">
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_last_name">Last Name</label>
+          <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="Enter Last Name"
+                 name="last_name" id="id_last_name">
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_phone_number">Phone Number</label>
+          <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="Enter Phone Number"
+                 name="phone_number" id="id_phone_number">
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_date_of_birth">Date of Birth</label>
+          <input form="id_form" required type="date" class="form-control br-0 dark" name="date_of_birth"
+                 id="id_date_of_birth">
+        </div>
+
+        <div class="inp my-2">
+          <label for="id_age">Age</label>
+          <input form="id_form" required type="number" class="form-control br-0 dark" placeholder="Enter Age" name="age"
+                 id="id_age">
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+
+      <div class="col-md-5 m-auto position-relative zi-2">
+        <h3 class="text-white">CRW Truck Driving Training School</h3>
+
+        <table class="table my-5">
+          <tr>
+            <td class="va-middle border-0">
+              <img src="{% static 'img/env.png' %}" class="img-fluid" alt="">
+            </td>
+
+            <td class="va-middle border-0">
+              <p class="text-white text-left mb-0">
+                <a href="mailto:clylescrwtraining@gmail.com" class="text-white">clylescrwtraining@gmail.com</a>
+                <br>
+                <a href="mailto:khuntercrwtraining@gmail.com" class="text-white">khuntercrwtraining@gmail.com</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table class="table my-5">
+          <tr>
+            <td class="va-middle border-0">
+              <img src="{% static 'img/map.png' %}" class="img-fluid" alt="">
+            </td>
+
+            <td class="va-middle border-0">
+              <p class="text-white text-left mb-0">
+                1850 South West St.
+                <br>
+                Jackson, MS 39201
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table class="table my-5">
+          <tr>
+            <td class="va-middle border-0">
+              <img src="{% static 'img/call.png'%}" class="img-fluid" alt="">
+            </td>
+
+            <td class="va-middle border-0">
+              <p class="text-white text-left mb-0">
+                <a href="tel:Fax: 601-968-8023" class="text-white">
+                  Tel: 601-968-8023 <br>
+                </a>
+
+                <a href="" class="text-white">
+                  Fax: 601-968-8024 <br>
+                </a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secondStep">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h5>Address Information</h5>
+
+        <div class="row">
+          <div class="col-md-6 p-2">
+            <label for="id_email">Email Address</label>
+            <input form="id_form" required type="email" class="form-control br-0 dark" placeholder="Enter Email Address"
+                   name="email" id="id_email">
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_street_address">Street Address</label>
+            <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="Street Address"
+                   name="street_address" id="id_street_address">
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_address_1">Address line 1</label>
+            <textarea name="address_1" class="form-control br-0 dark" placeholder="Enter Address line 1"
+                      id="id_address_1" cols="30" rows="3"></textarea>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_address_2">Address line 2</label>
+            <textarea name="address_2" class="form-control br-0 dark" placeholder="Enter Address line 2"
+                      id="id_address_2" cols="30" rows="3"></textarea>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_city">City</label>
+            <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="City" name="city"
+                   id="id_city">
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_state">State</label>
+            <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="State" name="state"
+                   id="id_state">
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_postal_code">Postal code</label>
+            <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="Postal code"
+                   name="postal_code" id="id_postal_code">
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_country">Country</label>
+            <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="Country"
+                   name="country" id="id_country">
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_ssn">Special Security Number</label>
+            <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="Enter SSN" name="ssn"
+                   id="id_ssn">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h5>Driver Information</h5>
+
+        <div class="row">
+          <div class="col-md-6 p-2">
+            <div class="row">
+              <div class="col-md-4">
+                <label class="d-block">High School Diploma</label>
+                <input form="id_form" required type="radio" value="yes" name="high_school_diploma" id="yesHd"> <label
+                       for="yesHd" class="mr-3">Yes</label>
+                <input form="id_form" required type="radio" value="no" name="high_school_diploma" id="noHd"> <label
+                       for="noHd">No</label>
+              </div>
+
+              <div class="col-md-4">
+                <label class="d-block">Valid Driver's License</label>
+                <input form="id_form" required type="radio" value="yes" name="license" id="yesVd"> <label for="yesVd"
+                       class="mr-3">Yes</label>
+                <input form="id_form" required type="radio" value="no" name="license" id="noVd"> <label
+                       for="noVd">No</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_driver_license_class" class="d-block">Driver License Class</label>
+            <input form="id_form" required type="text" class="form-control br-0 dark"
+                   placeholder="Enter Driver's License Class" name="driver_license_class" id="id_driver_license_class">
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_driver_license_number" class="d-block">Driver License Number</label>
+            <input form="id_form" required type="text" class="form-control br-0 dark"
+                   placeholder="Enter Driver's License Number" name="driver_license_number"
+                   id="id_driver_license_number">
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="id_state_issued" class="d-block">State Issued</label>
+            <input form="id_form" required type="text" class="form-control br-0 dark" placeholder="State Issued"
+                   name="state_issued" id="id_state_issued">
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Do you have any outstanding tickets?</label>
+            <input form="id_form" required type="radio" value="yes" name="tickets" id="yes1"> <label for="yes1"
+                   class="mr-3">Yes</label>
+            <input form="id_form" required type="radio" value="no" name="tickets" id="no1"> <label for="no1">No</label>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Do you have any moving violation in the last three years?</label>
+            <input form="id_form" required type="radio" value="yes" name="violation" id="yes2"> <label for="yes2"
+                   class="mr-3">Yes</label>
+            <input form="id_form" required type="radio" value="no" name="violation" id="no2"> <label
+                   for="no2">No</label>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Have you been charged with DUI- DWI in the last five years?</label>
+            <input form="id_form" required type="radio" value="yes" name="dui_dwi" id="yes3"> <label for="yes3"
+                   class="mr-3">Yes</label>
+            <input form="id_form" required type="radio" value="no" name="dui_dwi" id="no3"> <label for="no3">No</label>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Have you ever been convicted of a felony?</label>
+            <input form="id_form" required type="radio" value="yes" name="felony" id="yes4"> <label for="yes4"
+                   class="mr-3">Yes</label>
+            <input form="id_form" required type="radio" value="no" name="felony" id="no4"> <label for="no4">No</label>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Can you pass a drug test?</label>
+            <input form="id_form" required type="radio" value="yes" name="drug" id="yes5"> <label for="yes5"
+                   class="mr-3">Yes</label>
+            <input form="id_form" required type="radio" value="no" name="drug" id="no5"> <label for="no5">No</label>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">*Do you have any health problems?</label>
+            <input form="id_form" required type="radio" value="yes" name="health" id="yes6"> <label for="yes6"
+                   class="mr-3">Yes</label>
+            <input form="id_form" required type="radio" value="no" name="health" id="no6"> <label for="no6">No</label>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Have you ever attended a driving school?</label>
+            <input form="id_form" required type="radio" value="yes" name="driving" id="yes7"> <label for="yes7"
+                   class="mr-3">Yes</label>
+            <input form="id_form" required type="radio" value="no" name="driving" id="no7"> <label for="no7">No</label>
+          </div>
+
+          <div class="col-md-6 p-2">
+            <label for="" class="d-block">Are you currently employed?</label>
+            <input form="id_form" required type="radio" value="yes" name="employed" id="yes8"> <label for="yes8"
+                   class="mr-3">Yes</label>
+            <input form="id_form" required type="radio" value="no" name="employed" id="no8"> <label for="no8">No</label>
+          </div>
+
+          <div class="col-12 p-2">
+            <div class="text-center mt-3">
+              <button form="id_form" type="submit"
+                      class="btn btn-dark m-auto br-0 border-0 btn-gredient text-white text-uppercase">
+                Submit Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

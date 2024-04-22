@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section class="tables">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col-12">
+        <div class="card card-border px-4 py-4 shadow">
+          <div class="d-flex flex-wrap align-items-center justify-content-between">
+            <h2>Registered Students</h2>
+
+            <a href="{% url 'students:new' %}" class="btn btn-dark border-0 btn-gredient text-white mt-4 mt-md-0">
+              Add New Student
+            </a>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <button class="btn btn-dark border-0 btn-gredient text-white mt-4" onclick="exportStudents('excel')">
+                Export to Excel
+              </button>
+
+              <button class="btn btn-dark border-0 btn-gredient text-white mt-4" onclick="exportStudents('pdf')">
+                Export to PDF
+              </button>
+            </div>
+
+            <div class="col-md-4 mt-4">
+              <input form="id_query_form" type="text" name="search" id="id_search" class="form-control mb-3"
+                     placeholder="Search..." value="{{ request.GET.search }}">
+              <input class="form-control" type="text" name="daterange" />
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table mt-5">
+              <tr>
+                <td>Sr.</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Address</td>
+                <td>Driver License Number</td>
+                <td>Start Date</td>
+                <td>Graduation Date</td>
+                <td>Phone #</td>
+                <td>Actions</td>
+              </tr>
+
+              {% for student in object_list %}
+              <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.first_name }} {{ student.last_name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.address }}
+                <td>{{ student.driver_license_number }}</td>
+                <td>{{ student.start_date }}</td>
+                <td>
+                  {% if student.graduation_date %}
+                  {{ student.graduation_date }}
+                  {% else %}
+                  N/A
+                  {% endif %}
+                </td>
+
+                <td>{{ student.phone_number }}</td>
+
+                <td>
+                  <div class="d-flex align-items-center">
+                    <a href="{% url 'students:detail' student.id %}" class="font-size-14">Details</a>
+                    <span class="mx-1">|</span>
+
+                    <a href="{% url 'students:edit' student.id %}" class="font-size-14">Edit</a>
+                    <span class="mx-1">|</span>
+
+                    <form action="{% url 'students:delete' student.id %}" id="id_form_delete" method="POST">
+                      {% csrf_token %}
+                      <a href="javascript:void(0)" class="font-size-14"
+                         onclick="$('#id_form_delete').submit()">Delete</a>
+                    </form>
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+
+          <div class="text-right mt-5">
+            <div class="pagination">
+              {% if page_obj.has_previous %}
+              <a href="javascript:void(0)" class="btn btn-outline-dark br-0"
+                 onclick="changePage('{{ page_obj.previous_page_number }}')">
+                <i class="fa fa-angle-left"></i>
+              </a>
+              {% else %}
+              <a href="javascript:void(0)" class="disabled btn btn-outline-dark br-0">
+                <i class="fa fa-angle-left"></i>
+              </a>
+              {% endif %}
+
+              {% if page_obj.number|add:'-4' > 1 %}
+              <a class="btn btn-outline-dark br-0" href="javascript:void(0)"
+                 onclick="changePage(`{{ page_obj.number|add:'-5' }}`)">
+              </a>
+              {% endif %}
+
+              {% for i in page_obj.paginator.page_range %}
+              {% if page_obj.number == i %}
+              <a class="btn btn-outline-dark br-0" href="javascript:void(0)" onclick="changePage('{{ i }}')">
+                {{ i }}
+              </a>
+
+              {% elif i > page_obj.number|add:'-5' and i < page_obj.number|add:'5' %} <a
+                class="btn btn-outline-dark br-0" href="javascript:void(0)" onclick="changePage('{{ i }}')">
+                {{ i }}
+                </a>
+                {% endif %}
+                {% endfor %}
+
+                {% if page_obj.paginator.num_pages > page_obj.number|add:'4' %}
+                <a class="btn btn-outline-dark br-0" href="javascript:void(0)"
+                   onclick="changePage(`{{ page_obj.number|add:'5' }}`)">
+                </a>
+                {% endif %}
+
+                {% if page_obj.has_next %}
+                <a class="btn btn-outline-dark br-0" href="javascript:void(0)"
+                   onclick="changePage('{{ page_obj.next_page_number }}')">
+                  <i class="fa fa-angle-right"></i>
+                </a>
+
+                {% else %}
+                <a href="javascript:void(0)" class="disabled btn btn-outline-dark br-0">
+                  <i class="fa fa-angle-right"></i>
+                </a>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form id="id_query_form" method="GET">
+    <input id="id_page" name="page" type="hidden" value="">
+    <input id="id_start_date" name="start_date" type="hidden" value="">
+    <input id="id_end_date" name="end_date" type="hidden" value="">
+  </form>
+
+  <form action="{% url 'students:export' %}" id="id_export_form" method="GET">
+    <input id="id_type" name="type" type="hidden" value="">
+    <input id="id_export_search" name="export_search" type="hidden" value="">
+    <input id="id_export_start_date" name="start_date" type="hidden" value="">
+    <input id="id_export_end_date" name="end_date" type="hidden" value="">
+  </form>
+</section>
+{% endblock content %}
+
+
+{% block javascript %}
+<script>
+  $(function () {
+    $('input[name="daterange"]').daterangepicker({
+      opens: 'left'
+    }, function (start, end, label) {
+      $("#id_start_date").val(moment(start).format('YYYY-MM-DD'));
+      $("#id_end_date").val(moment(end).format('YYYY-MM-DD'));
+      $("#id_query_form").submit();
+    });
+  });
+
+  function changePage(page_no) {
+    $("#id_page").val(page_no);
+    $("#id_query_form").submit();
+  }
+
+  function exportStudents(type) {
+    $("#id_type").val(type);
+    $("#id_export_search").val("{{ request.GET.search }}");
+    $("#id_export_start_date").val("{{ request.GET.start_date }}");
+    $("#id_export_end_date").val("{{ request.GET.end_date }}");
+    $("#id_export_form").submit();
+  }
+</script>
+{% endblock javascript %}

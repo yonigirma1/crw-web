@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="tabsection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 p-2 border-right">
+        <ul class="list-unstyled m-0 p-0 btns">
+          <li>
+            <button class="px-0 btn btn-block text-left text-uppercase active">
+              <div class="borderleft"></div>
+              Admission Requirements
+            </button>
+          </li>
+
+          <li>
+            <button class="px-0 btn btn-block text-left text-uppercase">
+              <div class="borderleft"></div>
+              Grading Scale
+            </button>
+          </li>
+
+          <li>
+            <button class="px-0 btn btn-block text-left text-uppercase">
+              <div class="borderleft"></div>
+              School Curriculum
+            </button>
+          </li>
+
+          <li>
+            <button class="px-0 btn btn-block text-left text-uppercase">
+              <div class="borderleft"></div>
+              Attendence Policy/rules
+            </button>
+          </li>
+
+          <li>
+            <button class="px-0 btn btn-block text-left text-uppercase">
+              <div class="borderleft"></div>
+              Job search assistance
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-1"></div>
+
+      <div class="col-md-8">
+        <div class="admission">
+          <h2>Admission Requirements</h2>
+          <p> Applicants for admission to the Truck Driver program must meet the following requirements:</p>
+
+          <table class="table">
+            <tr>
+              <td class="border-0">
+                <img src="{% static 'img/dot.png' %}" alt="">
+              </td>
+
+              <td class="border-0">
+                <p class="mb-0">
+                  Be a high school graduate or equivalent, possess and military DD 214 certificate, or demonstrated the
+                  ability to benefit from the training offered through successful completion of an entrance exam.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="border-0">
+                <img src="{% static 'img/dot.png' %}" alt="">
+              </td>
+
+              <td class="border-0">
+                <p class="mb-0">
+                  Be a minimum of 18 years old of age to drive intrastate and 21 years to drive interstate.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="border-0">
+                <img src="{% static 'img/dot.png' %}" alt="">
+              </td>
+
+              <td class="border-0">
+                <p class="mb-0">
+                  Have an acceptable driving record.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="border-0">
+                <img src="{% static 'img/dot.png' %}" alt="">
+              </td>
+
+              <td class="border-0">
+                <p class="mb-0">
+                  Possess a valid driver’s license.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="border-0">
+                <img src="{% static 'img/dot.png' %}" alt="">
+              </td>
+
+              <td class="border-0">
+                <p class="mb-0">
+                  Pass a DOT physical examination and drug screen.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="border-0">
+                <img src="{% static 'img/dot.png' %}" alt="">
+              </td>
+
+              <td class="border-0">
+                <p class="mb-0">
+                  Have no outstanding driving validations in and U. S. state.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="border-0">
+                <img src="{% static 'img/dot.png' %}" alt="">
+              </td>
+
+              <td class="border-0">
+                <p class="mb-0">
+                  Able to read, write and speak the English language.
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <p>
+            Persons desiring to make applications for admission should contact the school or one of its representatives.
+            Applicants must be interviewed by a representative of the school, complete and enrollment (student
+            contract), and submit other information which may be required to determine qualifications. All prospective
+            applicants are invited to visit the school for a personal tour of the facility. Non-high school graduates or
+            equivalent must successfully pass the school’s entrance examination.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

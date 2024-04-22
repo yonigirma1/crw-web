@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section class="tables">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col-12">
+        <div class="card card-border px-4 py-4 shadow">
+          <a href="{% url 'students:list' %}" class="font-size-14">
+            <i class="fa fa-angle-left mr-2"></i>
+            <span>Back to student listing</span>
+          </a>
+
+          <h2 class="mt-5 mb-4">{{ title }}</h2>
+
+          <div class="row">
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">First Name</div>
+              {{ student.first_name }}
+            </div>
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">Last Name</div>
+              {{ student.last_name }}
+            </div>
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">Email</div>
+              {{ student.email }}
+            </div>
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">Phone Number</div>
+              {{ student.phone_number }}
+            </div>
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">Social Securtiy Number</div>
+              {{ student.ssn }}
+            </div>
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">State Issued</div>
+              {{ student.get_state_issued_display }}
+            </div>
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">Driver License Number</div>
+              {{ student.driver_license_number }}
+            </div>
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">Driver License Class</div>
+              {{ student.get_driver_license_class_display }}
+            </div>
+
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">Start Date</div>
+              {{ student.start_date }}
+            </div>
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">Graduation Date</div>
+              {% if student.graduation_date %}
+              {{ student.graduation_date }}
+              {% else %}
+              N/A
+              {% endif %}
+            </div>
+
+            <div class="col-md-6 mt-4">
+              <div class="font-weight-700 mb-2">Date of Birth</div>
+              {{ student.date_of_birth }}
+            </div>
+
+            <div class="col-md-12 mt-4">
+              <div class="font-weight-700 mb-2">Address</div>
+              {{ student.address }}
+            </div>
+
+            <div class="col-md-12 mt-4">
+              <div class="font-weight-700">Attachments</div>
+              {% if student.transcript_file %}
+
+              <div class="mt-2">
+                <a href="{{ student.transcript_file.url }}">{{ student.transcript_file.name }}</a>
+              </div>
+              {% endif %}
+
+              {% if student.id_file %}
+              <div class="mt-2">
+                <a href="{{ student.id_file.url }}">{{ student.id_file.name }}</a>
+              </div>
+              {% endif %}
+
+              {% if student.application_file %}
+              <div class="mt-2">
+                <a href="{{ student.application_file.url }}">{{ student.application_file.name }}</a>
+              </div>
+              {% endif %}
+
+              {% if student.driver_license_file %}
+              <div class="mt-2">
+                <a href="{{ student.driver_license_file.url }}">{{ student.driver_license_file.name }}</a>
+              </div>
+              {% endif %}
+
+              {% if student.medical_card_file %}
+              <div class="mt-2">
+                <a href="{{ student.medical_card_file.url }}">{{ student.medical_card_file.name }}</a>
+              </div>
+              {% endif %}
+
+              {% if student.birth_certificate_file %}
+              <div class="mt-2">
+                <a href="{{ student.birth_certificate_file.url }}">{{ student.birth_certificate_file.name }}</a>
+              </div>
+              {% endif %}
+
+              {% if student.drug_screening_file %}
+              <div class="mt-2">
+                <a href="{{ student.drug_screening_file.url }}">{{ student.drug_screening_file.name }}</a>
+              </div>
+              {% endif %}
+
+              {% if student.miscellaneous_file %}
+              <div class="mt-2">
+                <a href="{{ student.miscellaneous_file.url }}">{{ student.miscellaneous_file.name }}</a>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form id="id_query_form" method="GET">
+    <input id="id_page" name="page" type="hidden" value="">
+  </form>
+
+  <form action="{% url 'students:export' %}" id="id_export_form" method="GET">
+    <input id="id_type" name="type" type="hidden" value="">
+    <input id="id_export_search" name="export_search" type="hidden" value="">
+  </form>
+</section>
+{% endblock content %}

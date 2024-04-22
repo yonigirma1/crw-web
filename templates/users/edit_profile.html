@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section class="tables">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col-12">
+        <div class="card card-border px-4 py-4 shadow">
+          <h2 class="my-4">{{ title }}</h2>
+
+          <form method="POST" class="stDetails mt-4">
+            {% csrf_token %}
+
+            <div class="form-group">
+              <label for="id_email">Email *</label>
+              <input name="email" id="id_email" value="{{ user.email }}" class="form-control" disabled>
+            </div>
+
+            <div class="form-group mt-4">
+              <label for="id_old_password">First Name *</label>
+              {{ form.first_name }}
+              <small class="text-danger">{{ form.errors.first_name.0 }}</small>
+            </div>
+
+            <div class="form-group mt-4">
+              <label for="id_old_password">Last Name *</label>
+              {{ form.last_name }}
+              <small class="text-danger">{{ form.errors.last_name.0 }}</small>
+            </div>
+
+            <div class="form-group mt-5">
+              <button type="submit" class="btn btn-dark btn-block br-0 border-0 py-3 btn-gredient text-white">
+                Update Profile
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+{% endblock content %}

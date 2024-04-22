@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="hero bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 m-auto">
+        <h1 class="text-white text-uppercase">Training successful drivers one mile at a time</h1>
+
+        <a href="{% url 'pages:apply_online' %}" class="btn btn-dark br-0 border-0 btn-gredient text-white mt-3">
+          Apply now!
+        </a>
+      </div>
+
+      <div class="col-md-6 m-auto">
+        <div class="text-center">
+          <img src="{% static 'img/truck.png' %}" class="img-fluid truck" alt="">
+          <img src="{% static 'img/bg-shape.png' %}" class="img-fluid position-absolute shapeBg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="military">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 p-2 m-auto">
+        <h2>Are you a military veteran, or currently receiving veterans benefits?</h2>
+
+        <p>We welcome all those who are serving and those who have served to include their dependents if they have
+          benefits through the GI Bill®
+        </p>
+      </div>
+
+      <div class="col-md-2"></div>
+
+      <div class="col-md-5 m-auto position-relative zi-2">
+        <p class="text-white">
+          A Commercial Driver's License (CDL) is a driver's license required in the United States to operate any type
+          of vehicle which has a gross vehicle weight rating (GVWR) of 26,000 lb (11,793 kg) or more for commercial
+          use, or transports quantities of hazardous material that require warning placards under Department of
+          Transportation regulations, or that is designed to transport 16 or more passengers, including the driver.
+          This includes (but is not limited to) tow trucks, tractor trailers, and buses.
+        </p>
+
+        <img src="{% static 'img/bbb.png' %}" class="img-fluid bbb" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="worth position-relative zi-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 p-2">
+        <h2 class="font-weight-normal text-uppercase text-white">Why It's Worth the Time?</h2>
+      </div>
+
+      <div class="col-md-5 p-2">
+        <p class="text-white">
+          The U.S. trucking industry is comprised of over 227,930 for-hire carriers and more than 282,485 private
+          carriers; 96.0% with less than 20 trucks. <br> <br>
+          The trucking industry employs 7.3 million people employed throughout the economy in jobs that relate to
+          trucking activity in 2008, excluding self-employed. <br> <br>
+          In tonnage, trucks carried 68.8% of all freight – 10.2 billion tons in 2008. <br> <br>
+          In 2007, trucks hauled over $8.3 trillion worth of merchandise. <br>
+        </p>
+      </div>
+
+      <div class="col-md-4 p-2">
+        <p class="text-white">
+          There are 3.39 million truck drivers employed in the U.S., according to the U.S. Department of Labor.
+          <br><br>
+          The average daily run for a long-haul, over-the-road truck driver is nearly 500 miles.
+          <br><br>
+          A majority of long-haul, over-the-road truck drivers will drive, on average, 100,000 to 110,000 miles per
+          year.
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <h2 class="font-weight-normal text-uppercase text-white">We accept</h2>
+
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <a href="" class="text-white">Cash (Installment Plan)</a>
+        </div>
+
+        <div class="col-md-4">
+          <a href="" class="text-white">Grant Funding (State Agencies)</a>
+        </div>
+
+        <div class="col-md-4">
+          <a href="" class="text-white">GI Bill®</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="howBig">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+
+      <div class="col-md-8">
+        <div class="text-center">
+          <img src="{% static 'img/sm-trucl.png' %}" class="img-fluid smTruck" alt="">
+
+          <h2 class="font-weight-normal text-uppercase text-dark mt-3">
+            How big is the
+            <br>
+            trucking industry?
+          </h2>
+
+          <p>
+            The trucking companies, warehouses and private sector in the U.S. employs an estimated 8.9 million people
+            employed in trucking-related jobs; nearly 3.5 million were truck drivers. Of this figure UPS employs
+            60,000 workers and 9% are owner operators. LTL shippers account for around 13.6 percent of America's
+            trucking sector. Drivers with a Class A CDL can make between $35,000 to $50,000 on average a year!!
+          </p>
+        </div>
+
+        <div class="line"></div>
+      </div>
+
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
